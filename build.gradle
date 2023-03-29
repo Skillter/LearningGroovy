@@ -10,12 +10,16 @@ repositories {
 }
 
 dependencies {
-    implementation fileTree('C:/Program Files (x86)/Groovy/lib') {
-        include '*.jar'
-        include '*/*.jar'
-    }
-    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
-    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
+//    Don't use local Groovy, instead get it from apache
+//    implementation fileTree('C:/Program Files (x86)/Groovy/lib') {
+//        include '*.jar'
+//        include '*/*.jar'
+//    }
+
+    implementation 'org.apache.groovy:groovy:4.0.10'
+
+     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.8.1'
+     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.1'
 }
 
 test {
