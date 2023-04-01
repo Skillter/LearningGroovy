@@ -38,7 +38,7 @@ class Calculator {
         return result
     }
 
-    static int division(int number1, int number2) {
+    static float division(int number1, int number2) {
         if (number2 == 0) {
             throw new IllegalArgumentException("Can't divide by 0.")
         } else {
@@ -46,8 +46,8 @@ class Calculator {
         }
     }
 
-    static int division(List<Integer> numbers) {
-        int result = numbers[0]
+    static float division(List<Integer> numbers) {
+        float result = numbers[0]
 
         for (int number : numbers.stream().skip(1)) {
             if (number == 0)
